@@ -48,5 +48,4 @@ class BibliotecaTest {
         assertEquals(membro, emprestimo.getMembro());
         assertEquals(dataEmprestimo, emprestimo.getDataEmprestimo());
     }
-
 }
