@@ -30,5 +30,4 @@ class EmprestimoTest {
         String expected = "Emprestimo{livro=" + livro + ", membro=" + membro + ", dataEmprestimo=" + dataEmprestimo + "}";
         assertEquals(expected, emprestimo.toString());
     }
-
 }
