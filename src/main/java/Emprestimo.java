@@ -43,4 +43,13 @@ public class Emprestimo {
     public int hashCode() {
         return Objects.hash(livro, membro, dataEmprestimo);
     }
+
+    @Override
+    public String toString() {
+        return "Emprestimo{" +
+                "livro=" + livro +
+                ", membro=" + membro +
+                ", dataEmprestimo=" + dataEmprestimo +
+                '}';
+    }
 }

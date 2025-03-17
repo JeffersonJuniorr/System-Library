@@ -29,11 +29,11 @@ public class Biblioteca {
     }
 
     public void removerLivro(Livro livro) {
-        if (!livros.contains(livro)) {
+        if (livros.contains(livro)) {
             livros.remove(livro);
             System.out.println("Livro removido: " + livro);
         } else {
-            System.out.println("O livro não encontrado: " + livro);
+            System.out.println("Livro não encontrado: " + livro);
         }
     }
 

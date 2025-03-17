@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Livro {
     private String titulo;
     private String autor;
@@ -28,6 +30,19 @@ public class Livro {
 //    Sem sobrescrever o método toString(), a chamada para System.out.println(livro) resultaria na impressão do
 //    nome da classe seguido pelo hash code do objeto, algo como Livro@1a2b3c. Ao sobrescrever toString(),
 //    você obtém uma representação legível e mais informativa do objeto.
+@Override
+public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    Livro livro = (Livro) o;
+    return ISBN.equals(livro.ISBN); // Compara pelo ISBN
+}
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ISBN); // Gera o hash code com base no ISBN
+    }
+
     @Override
     public String toString() {
         return "Livro{" +
